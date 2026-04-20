@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - Cálculo III</title>
+    <style>
+        body { 
+            font-family: sans-serif; 
+            display: flex; 
+            flex-direction: column;
+            align-items: center; 
+            padding-top: 50px;
+            background-color: #1a1a1a; /* Oscuro para diferenciar que es admin */
+            color: white;
+        }
+        .admin-card {
+            background: #2d2d2d;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            border: 1px solid #444;
+            text-align: center;
+        }
+        .status-badge {
+            background-color: #2ea44f;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+        .back-button {
+            margin-top: 20px;
+            background: transparent;
+            color: #aaa;
+            border: 1px solid #444;
+            padding: 8px 15px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .back-button:hover { background: #3d3d3d; color: white; }
+    </style>
+</head>
+<body>
+
+<div class="admin-card">
+    <h2>Panel de Control <span class="status-badge">Online</span></h2>
+    <p>Bienvenido al área restringida.</p>
+    <hr style="border: 0; border-top: 1px solid #444; margin: 20px 0;">
+    
+    <div style="text-align: left;">
+        <p><strong>Configuración de variables:</strong></p>
+        <ul>
+            <li>Modo Optimización: Activado</li>
+            <li>Logs de Python: Conectados</li>
+            <li>Región de Servidor: EUnew</li>
+        </ul>
+    </div>
+
+    <button class="back-button" onclick="window.location.href='index.html'">← Volver al sitio público</button>
+</div>
+
+</body>
+</html>

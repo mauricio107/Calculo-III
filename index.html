@@ -41,29 +41,39 @@
             color: #666;
         }
 
-        /* --- BOTÓN CON TEXTURA (SECRET ACCESS) --- */
+        /* --- BOTÓN DE MANO (SECRET ACCESS) --- */
         .admin-button {
             position: fixed;
             right: 20px;
             bottom: 70px; /* Arriba del área de patrocinio */
-            width: 60px;
-            height: 60px;
-            border-radius: 12px;
-            border: 2px solid #333;
+            
+            /* Ajusta el tamaño del contenedor según el tamaño real de tu mano */
+            width: 80px;  
+            height: 80px;
+            
             cursor: pointer;
-            
-            /* AQUÍ COLOCAS TU TEXTURA */
+            z-index: 100; /* Asegura que esté por encima de otros elementos */
+
+            /* --- ESTILOS DE IMAGEN DE FONDO --- */
             background-image: url('admin-hand.png'); 
-            background-color: #444; /* Color de respaldo */
-            background-size: cover;
+            background-size: contain; /* Ajusta la imagen para que quepa entera sin cortarse */
+            background-repeat: no-repeat; /* No repetir la imagen */
+            background-position: center bottom; /* Centrada horizontalmente, pegada abajo */
+            background-color: transparent; /* QUITAMOS EL COLOR DE RESPALDO */
+
+            /* --- ELIMINAR EL CUADRO --- */
+            border: none; /* QUITAMOS EL BORDE */
+            box-shadow: none; /* QUITAMOS LA SOMBRA INICIAL */
+            border-radius: 0; /* QUITAMOS EL REDONDEO (ya no es necesario) */
             
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            /* Mantener transiciones para efectos de hover */
             transition: transform 0.2s, filter 0.2s;
         }
 
+        /* Efecto sutil al pasar el mouse para indicar que es clickeable */
         .admin-button:hover {
-            transform: scale(1.1);
-            filter: brightness(1.2);
+            transform: scale(1.1); /* Se agranda un poco */
+            filter: brightness(1.2); drop-shadow(0 4px 6px rgba(0,0,0,0.3)); /* Sombra suave SOLO alrededor de la mano, no del cuadrado */
         }
     </style>
 </head>

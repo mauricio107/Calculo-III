@@ -88,10 +88,29 @@
     <div id="resultado">Resultado: -</div>
 </div>
 
+<button onclick="toggleIntegrantes()" style="margin-top: 20px; background-color: #555;">
+    Ver integrantes del grupo
+</button>
+
+<div id="pad-integrantes" style="display: none; margin-top: 15px;">
+    <div class="card" style="margin-top: 0; padding: 1.5rem; border-left: 5px solid #2ea44f;">
+        <h3 style="margin-top: 0;">Integrantes:</h3>
+        <ul style="list-style: none; padding: 0; line-height: 1.8;">
+            <li>👤 Rivas Mendoza Mauricio Rafael</li>
+            <li>👤 Rojas Zarate Nedver Messi</li>
+            <li>👤 Vivanco Quispe Andy Rodrigo</li>
+        </ul>
+    </div>
+</div>
+
 <div class="admin-button" title="Acceso Restringido" onclick="accesoPrivado()"></div>
 
 <footer class="footer-patrocinio">
-    <div>Patrocinado por: <strong>Tu Proyecto de Ingeniería / Kugeln.io Dev</strong></div>
+    <div>Patrocinado por: 
+        <a href="https://kugeln.io" target="_blank" class="link-patrocinio">
+            <strong>Kugeln.io</strong>
+        </a>
+    </div>
     <div style="font-size: 0.7rem; margin-top: 5px;">© 2026 - Todos los derechos reservados</div>
 </footer>
 
